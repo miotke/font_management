@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User, Group #change this to reflect our actual models
 from fonts.models import FontFamily
-from rest_framework import serializers 
+from rest_framework import serializers
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -18,5 +18,5 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 class FontFamilySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = FontFamily
-        fields = ["url", "font_family_name"]
+        fields = ["url", "path_to_font_family"]
 
