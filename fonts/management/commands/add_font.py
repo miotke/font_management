@@ -41,14 +41,17 @@ class Command(BaseCommand):
                 """
                 try:
                     shutil.copytree(source, destination, symlinks, ignore)
+                    font_family_name = destination.removeprefix("font_storage/")
                     #Gets path to directory[1]
                     font_family_path = destination
                     # Save path to database[2]
-                    save_path = FontFamily(path_to_font_family=font_family_path)
+                    save_path = FontFamily(path_to_font_family=font_family_path, font_family_name=font_family_name)
                     save_path.save()
 
+                    self.stdout.write(f"✅ Successfully copied {str(font_family_name)} to {dst}")
+
                 except:
-                    self.stdout.write(f"Error because the directory {destination} already exists")
+                    self.stdout.write(f"🚨 Error because a directory for {font_family_name} already exists")
 
 
 
