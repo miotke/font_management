@@ -10,7 +10,7 @@ class FontFamily(models.Model):
     """
 
     # Font family detail
-    font_family_creator_name = models.CharField(max_length=100, blank=True)
+    font_family_name = models.CharField(max_length=100)
     # font_family_name = models.CharField(max_length=100, blank=True)
     # purchase_date = models.DateField(default=timezone.now)
     # cost = models.DecimalField(max_digits=7, decimal_places=2, blank=True)
@@ -22,8 +22,7 @@ class FontFamily(models.Model):
 
 
     def __str__(self):
-        return self.path_to_font_family
-
+        return self.font_family_name
 
 
 class Font(models.Model):
