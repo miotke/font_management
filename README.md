@@ -7,3 +7,9 @@ For implementation thoughts and some details about it, check the Documentation f
 * font_server.md
 
 If this actually works then remove "attempted" 😅.
+
+### Workflow
+
+Below is a quick diagram of the whole workflow of this system as it stands currently. This is, of course, open for modification.
+
+![workflow-diagram](Documentation/images/font_manager_workflow.jpeg)
