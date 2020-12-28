@@ -11,9 +11,6 @@ class FontFamily(models.Model):
 
     # Font family detail
     font_family_name = models.CharField(max_length=100)
-    # font_family_name = models.CharField(max_length=100, blank=True)
-    # purchase_date = models.DateField(default=timezone.now)
-    # cost = models.DecimalField(max_digits=7, decimal_places=2, blank=True)
     path_to_font_family = models.CharField(max_length=100)
 
 
@@ -29,9 +26,8 @@ class Font(models.Model):
 
     # Individual font details
     font_name = models.CharField(max_length=100)
-    #font_family = models.ForeignKey(FontFamily, on_delete=models.PROTECT)
+    font_family = models.ForeignKey(FontFamily, on_delete=models.PROTECT)
     checked_out = models.BooleanField(default=False)
-    assigned_to = models.CharField(max_length=100, blank=True)
 
 
     def save(self):
@@ -42,5 +38,5 @@ class Font(models.Model):
         return str([str(self.font_family), str(self.font_name)])
 
 
-    # class Meta:
-    #     ordering = ["font_family"]
+    class Meta:
+        ordering = ["font_family"]
