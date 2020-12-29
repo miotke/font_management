@@ -52,12 +52,14 @@ class Command(BaseCommand):
 
                     # Saving Font
                     for i in os.listdir(font_family_path):
-                        print(f"FONT: {i}")
+                        if i != ".DS_Store": # During development on macOS there is a .DS_Store file that we do not want to transfer. This check is in place for that reason
+                            try:
+                                save_font = Font(font_name=i, font_family=save_path)
+                                save_font.save()
 
-
-
-
-
+                                self.stdout.write(f"    👍 Font {i} saved to 📂 {save_path}")
+                            except:
+                                self.stdout.write(f"🚨 Error check that {i} doesn't already exist in {save_path}")
 
                 except:
                     self.stdout.write(f"🚨 Error because a directory for {font_family_name} already exists")
