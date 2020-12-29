@@ -11,6 +11,7 @@ USAGE: python manage.py delete_font [name of font group]
 
 import os
 import shutil
+from fonts.models import FontFamily
 from django.core.management.base import BaseCommand
 
 class Command(BaseCommand):
@@ -26,7 +27,14 @@ class Command(BaseCommand):
         font_path = os.path.join(path, font_family_to_remove)
 
         try:
+            # Removes directory from font_storage
             shutil.rmtree(font_path)
+
+            # Deletes entry from database
+            delete_from_database = FontFamily.objects.get(font_family_name=font_family_to_remove)
+            delete_from_database.delete()
+
+            # Outputs success message to console
             self.stdout.write(f"✅ Successfully removed {font_path}")
 
         except OSError as e:
