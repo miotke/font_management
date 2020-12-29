@@ -50,6 +50,15 @@ class Command(BaseCommand):
 
                     self.stdout.write(f"✅ Successfully copied {str(font_family_name)} to {dst}")
 
+                    # Saving Font
+                    for i in os.listdir(font_family_path):
+                        print(f"FONT: {i}")
+
+
+
+
+
+
                 except:
                     self.stdout.write(f"🚨 Error because a directory for {font_family_name} already exists")
 
