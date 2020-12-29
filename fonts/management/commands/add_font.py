@@ -44,11 +44,14 @@ class Command(BaseCommand):
                     font_family_name = destination.removeprefix("font_storage/")
                     #Gets path to directory[1]
                     font_family_path = destination
-                    # Save path to database[2]
-                    save_path = FontFamily(path_to_font_family=font_family_path, font_family_name=font_family_name)
-                    save_path.save()
+                    try:
+                        # Save path to database[2]
+                        save_path = FontFamily(path_to_font_family=font_family_path, font_family_name=font_family_name)
+                        save_path.save()
 
-                    self.stdout.write(f"✅ Successfully copied {str(font_family_name)} to {dst}")
+                        self.stdout.write(f"✅ Successfully copied {str(font_family_name)} to {dst}")
+                    except:
+                        self.stdout.write(f"🚨 Error attempting to save {save_path}")
 
                     # Saving Font
                     for i in os.listdir(font_family_path):
