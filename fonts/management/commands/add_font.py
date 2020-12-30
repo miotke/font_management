@@ -44,11 +44,26 @@ class Command(BaseCommand):
                     font_family_name = destination.removeprefix("font_storage/")
                     #Gets path to directory[1]
                     font_family_path = destination
-                    # Save path to database[2]
-                    save_path = FontFamily(path_to_font_family=font_family_path, font_family_name=font_family_name)
-                    save_path.save()
 
-                    self.stdout.write(f"✅ Successfully copied {str(font_family_name)} to {dst}")
+                    try:
+                        # Save path to database[2]
+                        save_path = FontFamily(path_to_font_family=font_family_path, font_family_name=font_family_name)
+                        save_path.save()
+
+                        self.stdout.write(f"✅ Successfully copied {str(font_family_name)} to {dst}")
+                    except:
+                        self.stdout.write(f"🚨 Error attempting to save {save_path}")
+
+                    # Saving Font
+                    for i in os.listdir(font_family_path):
+                        if i != ".DS_Store": # During development on macOS there is a .DS_Store file that we do not want to transfer. This check is in place for that reason
+                            try:
+                                save_font = Font(font_name=i, font_family=save_path)
+                                save_font.save()
+
+                                self.stdout.write(f"    👍 Font {i} saved to 📂 {save_path}")
+                            except:
+                                self.stdout.write(f"🚨 Error check that {i} doesn't already exist in {save_path}")
 
                 except:
                     self.stdout.write(f"🚨 Error because a directory for {font_family_name} already exists")
