@@ -26,8 +26,11 @@ class Font(models.Model):
 
     # Individual font details
     font_name = models.CharField(max_length=100)
-    font_family = models.ForeignKey(FontFamily, on_delete=models.PROTECT)
+    font_family = models.ForeignKey(FontFamily, related_name="fonts", on_delete=models.PROTECT)
     checked_out = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ["font_family"]
 
 
     def save(self):
@@ -35,8 +38,4 @@ class Font(models.Model):
 
 
     def __str__(self):
-        return str([str(self.font_family), str(self.font_name)])
-
-
-    class Meta:
-        ordering = ["font_family"]
+        return f"{self.font_family} --> {self.font_name}"
