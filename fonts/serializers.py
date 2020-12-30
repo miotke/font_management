@@ -18,13 +18,8 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class FontFamilySerializer(serializers.HyperlinkedModelSerializer):
+    fonts = serializers.StringRelatedField(many=True)
+
     class Meta:
         model = FontFamily
-        fields = ["url", "path_to_font_family", "font_family_name"]
-
-
-class FontSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Font
-        fields = ["font_name"]
-
+        fields = ["url", "path_to_font_family", "font_family_name", "fonts"]
