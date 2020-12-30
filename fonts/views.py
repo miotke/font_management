@@ -6,7 +6,6 @@ from rest_framework import permissions
 from fonts.serializers import UserSerializer
 from fonts.serializers import GroupSerializer
 from fonts.serializers import FontFamilySerializer
-from fonts.serializers import FontSerializer
 from fonts.models import FontFamily
 from fonts.models import Font
 
@@ -34,13 +33,4 @@ class FontFamilyViewSet(viewsets.ModelViewSet):
     """
     queryset = FontFamily.objects.all()
     serializer_class = FontFamilySerializer
-    permission_class = [permissions.IsAuthenticated]
-
-
-class FontViewSet(viewsets.ModelViewSet):
-    """
-    API endpoint that allows fonts to be viewed.
-    """
-    queryset = Font.objects.all().order_by("font_family")
-    serializer_class = FontSerializer
     permission_class = [permissions.IsAuthenticated]
