@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User #Again, change this model to reflect actual usage
-from django.contrib.auth.models import Group
+from django.contrib.auth.models import Group #Again, change this model to reflect actual usage
 from rest_framework import viewsets
 from rest_framework import permissions
 from fonts.serializers import UserSerializer
@@ -39,8 +39,8 @@ class FontFamilyViewSet(viewsets.ModelViewSet):
 
 class FontViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows font families to be viewed or edited.
+    API endpoint that allows fonts to be viewed.
     """
-    queryset = Font.objects.all()
+    queryset = Font.objects.all().order_by("font_family")
     serializer_class = FontSerializer
     permission_class = [permissions.IsAuthenticated]

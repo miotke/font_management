@@ -1,4 +1,5 @@
-from django.contrib.auth.models import User, Group #change this to reflect our actual models
+from django.contrib.auth.models import User #change this to reflect our actual models
+from django.contrib.auth.models import Group #change this to reflect our actual models
 from fonts.models import FontFamily
 from fonts.models import Font
 from rest_framework import serializers
