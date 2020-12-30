@@ -44,6 +44,7 @@ class Command(BaseCommand):
                     font_family_name = destination.removeprefix("font_storage/")
                     #Gets path to directory[1]
                     font_family_path = destination
+
                     try:
                         # Save path to database[2]
                         save_path = FontFamily(path_to_font_family=font_family_path, font_family_name=font_family_name)
