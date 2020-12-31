@@ -8,7 +8,6 @@ router = routers.DefaultRouter()
 router.register(r"users", views.UserViewSet)
 router.register(r"groups", views.GroupViewSet)
 router.register(r"font-family", views.FontFamilyViewSet)
-router.register(r"fonts", views.FontViewSet)
 
 urlpatterns = [
         path("", include(router.urls)),
