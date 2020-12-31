@@ -38,4 +38,5 @@ class Font(models.Model):
 
 
     def __str__(self):
-        return f"{self.font_family} --> {self.font_name}"
+        return f"{self.font_name}"
+
