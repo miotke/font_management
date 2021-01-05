@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0010BDCA25A3F3FE002C8E1E /* FontTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0010BDC925A3F3FE002C8E1E /* FontTableViewCell.swift */; };
 		00C9818A25A3CB5800C772DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C9818925A3CB5800C772DB /* AppDelegate.swift */; };
 		00C9818C25A3CB5800C772DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C9818B25A3CB5800C772DB /* SceneDelegate.swift */; };
 		00C9818E25A3CB5800C772DB /* FontListViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C9818D25A3CB5800C772DB /* FontListViewViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0010BDC925A3F3FE002C8E1E /* FontTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontTableViewCell.swift; sourceTree = "<group>"; };
 		00C9818625A3CB5800C772DB /* Fonts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fonts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00C9818925A3CB5800C772DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00C9818B25A3CB5800C772DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				00C9818D25A3CB5800C772DB /* FontListViewViewController.swift */,
+				0010BDC925A3F3FE002C8E1E /* FontTableViewCell.swift */,
 			);
 			path = "Font List View";
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			files = (
 				00C9819425A3CB5800C772DB /* Fonts.xcdatamodeld in Sources */,
 				00C9818E25A3CB5800C772DB /* FontListViewViewController.swift in Sources */,
+				0010BDCA25A3F3FE002C8E1E /* FontTableViewCell.swift in Sources */,
 				00C9818A25A3CB5800C772DB /* AppDelegate.swift in Sources */,
 				00C9818C25A3CB5800C772DB /* SceneDelegate.swift in Sources */,
 			);

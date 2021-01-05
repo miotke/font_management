@@ -25,8 +25,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func createEntryPoint() -> UIViewController {
-        let fontListViewController = FontListViewViewController()
-        return fontListViewController
+        let fontListTableViewController = FontListTableViewController()
+        return fontListTableViewController
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
