@@ -2,7 +2,7 @@
 
 This is the client app for macOS. Currently the app and it's code sits in `/Mac app/`.
 
-### Implimentation
+### Implementation
 
 The client app is a Swift Catalyst app. The reason for that is I'm just more familiar with the UIKit API than I am with AppKit.
 The general idea of this application is there will be a list of fonts with a toggle switch in each cell. The toggle switch is set to
