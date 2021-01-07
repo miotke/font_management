@@ -10,7 +10,7 @@ class FontFamily(models.Model):
     """
 
     # Font family detail
-    font_family_name = models.CharField(max_length=100)
+    font_family_name = models.CharField(max_length=100, primary_key=True)
     path_to_font_family = models.CharField(max_length=100)
 
 
