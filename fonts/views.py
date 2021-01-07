@@ -31,6 +31,6 @@ class FontFamilyViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows font families to be viewed or edited.
     """
-    queryset = FontFamily.objects.all()
+    queryset = FontFamily.objects.all().order_by("font_family_name")
     serializer_class = FontFamilySerializer
     permission_class = [permissions.IsAuthenticated]
