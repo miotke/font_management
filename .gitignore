@@ -3,3 +3,5 @@ db.sqlite3
 __pycache__/
 font_storage
 fonts/migrations/
+mac_app/Fonts.xcodeproj/project.xcworkspace/xcuserdata/fktq.xcuserdatad/UserInterfaceState.xcuserstate
+
