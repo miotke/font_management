@@ -3,16 +3,6 @@ import json
 import requests
 
 
-# Web request
-ENDPOINT = "font-family"
-ID = 24 # ID is the int in the URL. We need to find a way to change this int to list all fonts
-URL = f"http://127.0.0.1:8000/{ENDPOINT}/{ID}/" #change this to the actual server address
-HEADER = {
-    "Content-Type": "application/json"
-}
-
-
-font_list = []
 BANNER = """
  ********   *******   ****     ** **********  ********
 /**/////   **/////** /**/**   /**/////**///  **//////
@@ -25,6 +15,27 @@ BANNER = """
 
 A simple command line version of a font manager.
 """
+
+# Web request
+ENDPOINT = "font-family"
+ID = "windsor" # ID is the int in the URL. We need to find a way to change this int to list all fonts
+URL = f"http://127.0.0.1:8000/{ENDPOINT}/{ID}/" #change this to the actual server address
+HEADER = {
+    "Content-Type": "application/json"
+}
+
+font_list = []
+
+
+def list_font_families():
+        # 1. Make a request to api and return json
+    response = requests.get(URL, headers=HEADER)
+    json_data = response.json()
+
+    for (key, value) in json_data.items():
+        if key == "font_family_name":
+            print(key)
+
 
 
 def list_fonts():
@@ -49,5 +60,6 @@ def list_fonts():
 
 
 if __name__ == "__main__":
-    print(BANNER)
-    list_fonts()
+    list_font_families()
+    # print(BANNER)
+    # list_fonts()
