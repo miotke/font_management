@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0010BDCA25A3F3FE002C8E1E /* FontTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0010BDC925A3F3FE002C8E1E /* FontTableViewCell.swift */; };
+		002AAEE725B8EA7F00EB6750 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002AAEE625B8EA7F00EB6750 /* Font.swift */; };
+		002AAEED25B8EB6600EB6750 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002AAEEC25B8EB6600EB6750 /* NetworkManager.swift */; };
+		002AAEF525B8ECBD00EB6750 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002AAEF425B8ECBD00EB6750 /* NetworkErrors.swift */; };
 		0037921125A4D20900148B04 /* UtilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0037921025A4D20900148B04 /* UtilityViewController.swift */; };
 		00C9818A25A3CB5800C772DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C9818925A3CB5800C772DB /* AppDelegate.swift */; };
 		00C9818C25A3CB5800C772DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C9818B25A3CB5800C772DB /* SceneDelegate.swift */; };
@@ -39,6 +42,9 @@
 
 /* Begin PBXFileReference section */
 		0010BDC925A3F3FE002C8E1E /* FontTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontTableViewCell.swift; sourceTree = "<group>"; };
+		002AAEE625B8EA7F00EB6750 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		002AAEEC25B8EB6600EB6750 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		002AAEF425B8ECBD00EB6750 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
 		0037921025A4D20900148B04 /* UtilityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityViewController.swift; sourceTree = "<group>"; };
 		00C9818625A3CB5800C772DB /* Fonts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fonts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00C9818925A3CB5800C772DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +89,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		002AAEE525B8EA6400EB6750 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				002AAEE625B8EA7F00EB6750 /* Font.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		002AAEEB25B8EB5E00EB6750 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				002AAEEC25B8EB6600EB6750 /* NetworkManager.swift */,
+				002AAEF425B8ECBD00EB6750 /* NetworkErrors.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		00C9817D25A3CB5800C772DB = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +129,8 @@
 		00C9818825A3CB5800C772DB /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				002AAEEB25B8EB5E00EB6750 /* Networking */,
+				002AAEE525B8EA6400EB6750 /* Model */,
 				00E2714625A5354B0023CE10 /* Custom Views */,
 				00C981DA25A3CE9C00C772DB /* Font List View */,
 				00C981D325A3CC5D00C772DB /* Core Data */,
@@ -308,11 +333,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				002AAEED25B8EB6600EB6750 /* NetworkManager.swift in Sources */,
 				00E2714925A535820023CE10 /* SystemButton.swift in Sources */,
 				00C9819425A3CB5800C772DB /* Fonts.xcdatamodeld in Sources */,
 				0037921125A4D20900148B04 /* UtilityViewController.swift in Sources */,
 				00C9818E25A3CB5800C772DB /* FontListViewViewController.swift in Sources */,
+				002AAEE725B8EA7F00EB6750 /* Font.swift in Sources */,
 				0010BDCA25A3F3FE002C8E1E /* FontTableViewCell.swift in Sources */,
+				002AAEF525B8ECBD00EB6750 /* NetworkErrors.swift in Sources */,
 				00C9818A25A3CB5800C772DB /* AppDelegate.swift in Sources */,
 				00C9818C25A3CB5800C772DB /* SceneDelegate.swift in Sources */,
 			);
